@@ -58,7 +58,28 @@ class _LoginPageState extends State<LoginPage> {
               ),
               obscureText: true,
             ),
-            // TODO: Add button bar (101)
+            // TODO: Add button bar (101) --
+            OverflowBar(
+              alignment: MainAxisAlignment.end,
+              // TODO: Add a beveled rectangular border to CANCEL (103)
+              children: <Widget>[
+                // TODO: Add buttons (101) --
+                TextButton(
+                    onPressed: () {
+                      // TODO: Clear the text fields (101)
+                    },
+                    child: const Text('CANCEL'),
+                ),
+                // TODO: Add an elevation to NEXT (103)
+                // TODO: Add a beveled rectangular border to NEXT (103)
+                ElevatedButton(
+                  onPressed: () {
+                    // TODO: Show the next page (101)
+                  },
+                  child: const Text('NEXT'),
+                ),
+              ],//
+            ),
           ],
         ),
       ),

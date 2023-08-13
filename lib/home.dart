@@ -36,7 +36,8 @@ class HomePage extends StatelessWidget {
     return products.map((product) {
       return Card(
         clipBehavior: Clip.antiAlias,
-        // TODO: Adjust card heights (103)
+        // TODO: Adjust card heights (103) --
+        elevation: 0.0,
         child: Column(
           // TODO: Center items on the card (103)
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -128,7 +129,7 @@ class HomePage extends StatelessWidget {
         crossAxisCount: 2,
         padding: const EdgeInsets.all(16.0),
         childAspectRatio: 8.0 / 9.0,
-        // TODO: Build a grid of cards (102)
+        // TODO: Build a grid of cards (102) --
         children: _buildGridCards(context),
       ),
       // TODO: Set resizeToAvoidBottomInset (101) --

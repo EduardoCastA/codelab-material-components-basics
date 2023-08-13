@@ -22,8 +22,13 @@ dev_dependencies:
   flutter_lints: ^2.0.0
 
 flutter:
+  fonts: # TODO: Insert Fonts (103) --
+    - family: Rubik
+      fonts:
+        - asset: fonts/Rubik-Regular.ttf
+        - asset: fonts/Rubik-Medium.ttf
+          weight: 500
 
-  # TODO: Insert Fonts (103)
   uses-material-design: true
   assets:
     - assets/diamond.png

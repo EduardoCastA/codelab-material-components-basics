@@ -20,11 +20,10 @@ class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
 
   @override
-  _LoginPageState createState() => _LoginPageState();
+  State<LoginPage> createState() => _LoginPageState();
 }
 
 class _LoginPageState extends State<LoginPage> {
-  // TODO: Add text editing controllers (101) --
   final _usernameController = TextEditingController();
   final _passwordController = TextEditingController();
 
@@ -47,8 +46,6 @@ class _LoginPageState extends State<LoginPage> {
               ],
             ),
             const SizedBox(height: 120.0),
-            // TODO: Remove filled: true values (103) --
-            // TODO: Add TextField widgets (101) --
             // [Name]
             TextField(
               controller: _usernameController,
@@ -73,26 +70,21 @@ class _LoginPageState extends State<LoginPage> {
               alignment: MainAxisAlignment.end,
               // TODO: Add a beveled rectangular border to CANCEL (103) --
               children: <Widget>[
-                // TODO: Add buttons (101) --
                 TextButton(
-                    onPressed: () {
-                      // TODO: Clear the text fields (101) --
-                      _usernameController.clear();
-                      _passwordController.clear();
-                    },
-                    style: TextButton.styleFrom(
-                      foregroundColor: kShrineBrown900,
-                      shape: const BeveledRectangleBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(7.0)),
-                      ),
+                  onPressed: () {
+                    _usernameController.clear();
+                    _passwordController.clear();
+                  },
+                  style: TextButton.styleFrom(
+                    foregroundColor: kShrineBrown900,
+                    shape: const BeveledRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(7.0)),
                     ),
-                    child: const Text('CANCEL'),
+                  ),
+                  child: const Text('CANCEL'),
                 ),
-                // TODO: Add an elevation to NEXT (103) --
-                // TODO: Add a beveled rectangular border to NEXT (103) --
                 ElevatedButton(
                   onPressed: () {
-                    // TODO: Show the next page (101) --
                     Navigator.pop(context);
                   },
                   style: ElevatedButton.styleFrom(
@@ -105,7 +97,7 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                   child: const Text('NEXT'),
                 ),
-              ],//
+              ], //
             ),
           ],
         ),
